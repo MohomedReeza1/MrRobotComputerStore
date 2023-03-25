@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> COMPUTER STORE</title>
+        <link rel="stylesheet" href="thumbnail.css">
+		<link rel="stylesheet" href="NavCSS.css"> 
+        <link rel="icon" href="images/logo1.png">
+        <link rel="stylesheet" href="footer.css"> 
+        <style>
+            .pageEditorBtn {
+                padding: 7px;
+                background-color: #9B1003;
+                text-decoration: none;
+                color: white;
+                border-radius: 5px;
+                width: 5%;
+                clear: both;
+            }
+        </style>
+    </head>
+  
+        
+     
+
+
+        <body id="bodyColor" style="font-family: 'verdana', sans-serif;">
+		
+		
+		 
+	<div id="backtotop-heading" class="mrrobot-div">
+		<a class="robot-a" href="Home.html"><input type="image" name="robot computer" src="images/logo1.png" alt="robot computer" width="5%"></a>
+		<a class="robot-b" href="Home.html"><input type="image" name="robot computer" src="images/mrrobot.png" alt="robot computer" width="65%"></a>
+	</div>
+	
+	
+	<div class="nav"> 
+		<ul>
+			<li><input type="button" class="btn1" value="Home" name="button1" onClick="window.location.href='Home.html'"></li>
+			<li><input type="button" class="btn1" value="Buy Products" name="button2" onClick="window.location.href='product.html'"></li>			
+			<li><input type="button" class="btn1" value="Query Form" name="button3"  onClick="window.location.href='queryform.html'" ></li>  <!--parent.open() opens page in new tab-->
+			<li><input type="button" class="btn1" value="Quiz" name="button4" onClick="window.location.href='quiz.html'"></li>			
+			<li><input type="button" class="btn1" value="About Us" name="button5" onClick="window.location.href='about us.html'" ></li>			
+			<li><input type="button" class="btn1" value="Site Map" name="button6" onClick="window.location.href='sSitemap.html'"></li>
+			<li><input type="button" class="btn1" value="Student Details" name="button7" onClick="window.location.href='studentdetails.html'"></li>
+			<li><input type="button" class="btn1" value="Images" name="button8" onClick="window.location.href='thumbnail.html'" style="background-color:#9B1003;color:white;"></li>
+		</ul>
+	</div>
+		
+		
+		
+		
+		
+            <div class="dropdown"><br>
+                <button class="dropbtn">Background</button>
+                <div class="dropdown-content">
+                    <button class="dropdownItem" onclick="changeBackgroundColor(this)" value="#0047AB">Blue</button>
+                    <button class="dropdownItem" onclick="changeBackgroundColor(this)" value="#F2614A">Red</button>
+                    <button class="dropdownItem" onclick="changeBackgroundColor(this)" value="black">Black</button>
+                    <button class="dropdownItem" onclick="changeBackgroundColor(this)" value="white">White</button>
+                </div>
+            </div>
+        
+            <!-- dropdown list for text colour change -->
+            <div class="dropdown"><br>
+                <button class="dropbtn">Text</button>
+                <div class="dropdown-content">
+                    <button class="dropdownItem" onclick="changeTextColor(this)" value="#89CFF0">Blue</button>
+                    <button class="dropdownItem" onclick="changeTextColor(this)" value="#DC2306">Red</button>
+                    <button class="dropdownItem" onclick="changeTextColor(this)" value="black">Black</button>
+                    <button class="dropdownItem" onclick="changeTextColor(this)" value="white">White</button>
+                </div>
+            </div>
+        </div>
+        <h1>Thumbnail Images</h1>
+        <hr>
+
+		<br><br>
+
+        <!-- Display five thumbnail images in row -->
+        <div class="imagesInRow">
+            <div class="imageBox">
+                <div class="imagesItem">
+                    <img class="hover-shadow cursor" id="pc" src="Images/thum1.jpg" alt="pc" width="200" height="100" onmouseover="showMainImage(this);" onclick="navigateToMainImg();">
+                </div>       
+            </div>
+
+            <div class="imageBox">
+                <div class="imagesItem">
+                    <img class="hover-shadow cursor" id="keyboard" src="Images/thum2.jpg" alt="keyboard" width="200" height="100" onmouseover="showMainImage(this);" onclick="navigateToMainImg();">
+                </div>
+            </div>
+
+            <div class="imageBox">
+                <div class="imagesItem">
+                    <img class="hover-shadow cursor" id="cooling" src="Images/thum3.png" alt="cooling" width="200" height="100" onmouseover="showMainImage(this);" onclick="navigateToMainImg();">
+                </div>
+            </div>
+
+            <div class="imageBox">
+                <div class="imagesItem">
+                    <img class="hover-shadow cursor" id="service" src="Images/thump5.jpg" alt="service" width="200" height="100" onmouseover="showMainImage(this);" onclick="navigateToMainImg();">
+                </div>
+            </div>
+
+            <div class="imageBox">
+                <div class="imagesItem">
+                    <img class="hover-shadow cursor" id="builds" src="Images/thump6.jpg" alt="builds" width="200" height="100" onmouseover="showMainImage(this);" onclick="navigateToMainImg();">
+                </div>
+            </div>
+
+        </div>
+
+
+        <br>
+
+        <!-- Display the main image in wide area-->
+        <div class = "mainImgBox" id="mainImg">
+            <img class="image" id="imageAndDescription" src="Images/thum1.jpg" alt="pc" width="755" height="450">
+            <div class="imageDescription" id="imgtext"></div>
+
+            <!-- radio buttons  -->
+            <input type="radio" name="changeImg" id="img1" src="Images/thum1.jpg" alt="PC" onclick="showMainImage(this);">
+            <input type="radio" name="changeImg" id="img2" src="Images/thum2.jpg" alt="keyboard" onclick="showMainImage(this)">
+            <input type="radio" name="changeImg" id="img3" src="Images/thum3.png" alt="cooling" onclick="showMainImage(this)">
+            <input type="radio" name="changeImg" id="img4" src="Images/thump5.jpg" alt="service" onclick="showMainImage(this)">
+            <input type="radio" name="changeImg" id="img5" src="Images/thump6.jpg" alt="build" onclick="showMainImage(this)">
+
+            <!-- representative of the radio buttons -->
+            <div class="sliderRadioBtns">
+                <label for="img1" class="radioBtn" id="btn1"></label>
+                <label for="img2" class="radioBtn" id="btn2"></label>
+                <label for="img3" class="radioBtn" id="btn3"></label>
+                <label for="img4" class="radioBtn" id="btn4"></label>
+                <label for="img5" class="radioBtn" id="btn5"></label>
+            </div>
+        </div>
+        <br>
+        
+    </div>
+
+	<br><br><br><br><br><br>
+
+    <div class="backtotop">
+        <a href="#backtotop-heading"><img class="backtotop-img" src="Images/backtotop1.png" width="3%"></a>
+    </div>
+	
+
+	
+    <div>
+        <a id="editor" class="pageEditorBtn" href="student4.html" target="_blank">Page Editor</a>
+    </div>
+
+	<br>
+
+
+		<div class="bottom">
+				<div class="b-left">
+					<h4>&copy Since 2021</h4>
+					
+				</div>
+				<div class="b-middle">
+					<h4>Our Branches :</h4>
+					<ul>
+						<li> Gampaha</li><br>
+						<li> Colombo</li><br>
+						<li> Kandy </li><br>
+						
+					</ul>
+				</div>
+				<div class="b-right">
+					<h4> Find Us On :</h4>
+					<ul>
+						<li> Email: robot@gmail.com</li>
+					</ul>
+				</div>		
+		</div>
+
+	
+
+
+        <script>
+
+
+            //mouseover and shows the relevant description to it
+            function showMainImage(images) {
+                var expandImg = document.getElementById("imageAndDescription");//main image ID
+                var imgText = document.getElementById("imgtext");//Image text ID
+                expandImg.src = images.src;//replace image as relevant by assigning the new src name to
+                expandImg.parentElement.style.display;
+                var heading = images.alt;//save the value of the alt attribute of the object passe to the variable
+
+                
+
+                //switch image with the alt attribute.
+                switch(heading) {
+                    case "pc":
+                        imgText.innerHTML = "<h2>\"PC</i></h2><p> Most people today use computers either at work or at home. It is important that people have a quality resource for buying and servicing those computers.<b> MR ROBOT</b> Computers will provide the West Hawaii community with just such a quality resource – a one-stop shop for IBM-compatible computers. Eagle Computers will offer the following products and services with excellent customer service in a friendly, professional, and pleasant</p>";
+                        document.getElementById("btn1").style.background = "#ADD8E6";
+                        break;
+                    case "keyboard":
+                        imgText.innerHTML = "<h2><i>KEYBORDS<i></h2><p>A computer keyboard is an input device used to enter characters and functions into the computer system by pressing buttons, or keys. It is the primary device used to enter text. A keyboard typically contains keys for individual letters, numbers and special characters, as well as keys for specific functions. A keyboard is connected to a computer system using a cable or a wireless connection.</p>";
+                        break;
+                    case "cooling":
+                        imgText.innerHTML = "<h2><i>COOLING SYSTEM</i></h2><p>Computer cooling systems are passive or active systems that are designed to regulate and dissipate the heat generated by a computer so as to maintain optimal performance and protect the computer from damage that will occur from overheating.</p>";
+                        document.getElementById("btn3").style.background = "#ADD8E6";
+                        break;
+                    case "service":
+                        imgText.innerHTML = "<h2><i>SERVICE</i></h2><p>Computer Service Technicians are responsible for resolving problems such as hard drive crashes, obsolete hardware, infected files, spyware, malware, viruses, and otherwise compromised operating systems. Since service technicians have to handle clients’ problems, who sometimes may not be tech-savvy, they should demonstrate the ability to stay calm in trying situations.</p>";
+                        document.getElementById("btn4").style.background = "#ADD8E6";
+                        break;
+                    case "builds":
+                        imgText.innerHTML = "<h2><i>CUSTOM BUILDS</i></h2><p>As opposed to a prebuilt computer, a custom-built PC is a computer that's built and customized to meet specific consumer needs. People build computers for gaming, video and photo editing, animation, web browsing, and productivity needs. Different parts of the computer are prioritized based on the functions required by the builder. Individual components, like the graphics card, CPU, case, and motherboard, are usually purchased separately to find the best prices and save money on the completed system.</p>";
+                        document.getElementById("btn5").style.background = "#ADD8E6";
+                        break;
+                }
+            }
+
+            //changes background colour
+            function changeBackgroundColor(color) {
+                var backColor = color.value;
+                document.body.style.backgroundImage = "none";//to background image disappears
+                document.getElementById("bodyColor").style.backgroundColor = backColor;//change the colour
+            }
+
+            //Changes text colour
+            function changeTextColor(color) {
+                var backColor = color.value;
+                document.getElementById("imgtext").style.color = backColor;//change the colour of text 
+                document.getElementById("bodyColor").style.color = backColor;//change the text colour of the body this wasn't work cause i have mentioned seperate colors for h1,h2
+            }
+
+            
+
+
+            //Scroll to the expanded image
+            function navigateToMainImg() {
+                document.body.scrollDown = 400;
+                document.documentElement.scrollTop = 400;
+            }
+
+
+    </script>
+        
+
+    </body>
+</html>

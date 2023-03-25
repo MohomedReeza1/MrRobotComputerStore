@@ -1,0 +1,171 @@
+
+
+h1
+{
+    color: aliceblue;
+    text-align: center;
+    font-size: 60px;
+    margin-top: 80px;
+}
+h2{
+    text-align: center;
+}
+
+.imagesInRow
+{
+    margin: 30px 0 10px 10px;
+}
+
+.imageBox
+{
+    position: relative;
+    left: 200px;
+    padding:  0%;
+    margin: 0%;
+    float: left;
+    cursor: pointer;
+    border-radius: 8px;
+
+}
+
+.imagesItem
+{
+    position: relative;
+    margin-bottom: 10px;
+    margin-right: 18px;
+    top: 0;
+}
+
+
+.ColorIconsDropdown
+{
+    width: 25px;
+    height: 25px;
+    float: right;
+    top: 0;
+    margin: 0 30px 0 10px;
+    font-size: 14px;
+}
+
+.mainImgBox
+{
+    position: relative;
+    width: 1100px;
+    height: 600px;
+    margin-left: 190px;
+    clear: both;
+    background-color: gray;
+    border-radius: 8px;
+}
+
+.mainImgBox input {display: none;}
+
+.image
+{
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    clear: both;
+    border-radius: 8px;
+
+}
+
+
+
+.sliderRadioBtns
+{
+    position: relative;
+    width: 775px;
+    margin-top: -30px;
+    display: flex;
+    margin-left: 400px;
+}
+
+
+.radioBtn
+{
+    border: 3px solid #ADD8E6;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+    margin-right: 40px;
+}
+
+
+.imageDescription
+{
+    position: absolute;
+    bottom: 0;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5);
+    max-width: 1100px;
+    height: 300px;
+    transition: .5s ease;
+    opacity:0;
+    color: white;
+    font-size: 20px;
+    padding: 20px;
+    text-align: left;
+    clear: both;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.mainImgBox:hover .imageDescription {
+    opacity: 1;}
+
+.dropbtn {
+    background-color: transparent;
+    color: tomato;
+    font-size: 14px;
+    border: none;
+}
+
+.dropdown {
+    display: inline-block;
+    float: right;
+    margin: 0 10px 0 20px;
+}
+
+.dropdown-content {
+    display: none;
+    background-color: #f1f1f1;
+    min-width: 160px;
+}
+
+.dropdownItem
+{
+    width: 160px;
+    height: 40px;
+    border: none;
+}
+
+.dropdown-content button {
+    color: rgb(138, 21, 21);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+
+.dropdown-content button:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn 
+{font-size: 16px;
+}
+
+.radioBtn:hover{ 
+    background: #ADD8E6}
+
+
+.hover-shadow:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.7), 0 6px 20px 0 rgba(0, 0, 0, 0.25);
+}

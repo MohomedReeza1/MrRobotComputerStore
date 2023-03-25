@@ -1,0 +1,183 @@
+<!doctype html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>MR. ROBOT COMPUTER STORE</title>
+	<link rel="stylesheet" href="NavCSS.css"> 
+	<link rel="icon" href="images/logo1.png">
+	<link rel="stylesheet" href="footer.css"> 
+   
+	<style>
+
+	* {box-sizing: border-box;}
+	body {font-family: Verdana, sans-serif;}
+	.mySlides {display: none;}
+	img {vertical-align: middle;}
+
+	/* Slideshow container */
+	.slideshow-container {
+	  max-width: 1000px;
+	  position: relative;
+	  margin: auto;
+	}
+
+	@font-face {
+	  font-family: Esquadro;
+	  src: url(Esquadro-K7RaD.otf);
+	}
+
+	/* The dots/bullets/indicators */
+	.dot {
+	  height: 15px;
+	  width: 15px;
+	  margin: 0 2px;
+	  background-color: #bbb;
+	  border-radius: 50%;
+	  display: inline-block;
+	  transition: background-color 0.6s ease;
+	}
+
+	.active {
+	  background-color: #717171;
+	}
+
+	/* Fading animation */
+	.fade {
+	  animation-name: fade;
+	  animation-duration: 1.5s;
+	}
+
+	@keyframes fade {
+	  from {opacity: .4} 
+	  to {opacity: 1}
+	}
+
+	
+	.heading-slideshow {
+		color: white;
+		text-align: center;
+		padding: 5px;
+		font-size: 30px;
+	}
+
+	</style>
+	
+</head>
+
+<body>
+
+	<div  id="backtotop-heading" class="mrrobot-div">
+		<a class="robot-a" href="Home.html"><input type="image" name="robot computer" src="images/logo1.png" alt="robot computer" width="5%"></a>
+		<a class="robot-b" href="Home.html"><input type="image" name="robot computer" src="images/mrrobot.png" alt="robot computer" width="65%"></a>
+	</div>
+	
+	<div class="nav"> 
+		<ul>
+			<li><input type="button" class="btn1" value="Home" name="button1" onClick="window.location.href='Home.html'" style="background-color:#9B1003;color:white;"></li>
+			<li><input type="button" class="btn1" value="Buy Products" name="button2" onClick="window.location.href='product.html'"></li>			
+			<li><input type="button" class="btn1" value="Query Form" name="button3"  onClick="window.location.href='queryform.html'" ></li>  <!--parent.open() opens page in new tab-->
+			<li><input type="button" class="btn1" value="Quiz" name="button4" onClick="window.location.href='quiz.html'"></li>			
+			<li><input type="button" class="btn1" value="About Us" name="button5" onClick="window.location.href='about us.html'"></li>			
+			<li><input type="button" class="btn1" value="Site Map" name="button6" onClick="window.location.href='sSitemap.html'"></li>
+			<li><input type="button" class="btn1" value="Student Details" name="button7" onClick="window.location.href='studentdetails.html'"></li>
+			<li><input type="button" class="btn1" value="Images" name="button8" onClick="window.location.href='thumbnail.html'"></li>
+		</ul>
+	</div>
+
+	<br>
+	
+	
+	
+<div id="heading-slideshow" class="heading-slideshow">
+	<h1>MR. ROBOT COMPUTER STORE</h1>
+</div>
+	
+<br>
+
+
+<div class="slideshow">
+	<div class="slideshow-container">
+
+	<div class="mySlides fade">
+	  <img src="images/slideshow1.jpg" style="width:100%">
+	</div>
+
+	<div class="mySlides fade">
+	  <img src="images/slideshow2.jpeg" style="width:100%">
+	</div>
+
+	<div class="mySlides fade">
+	  <img src="images/slideshow3.jpg" style="width:100%">
+	</div>
+
+	</div>
+	<br>
+
+	<div style="text-align:center">
+	  <span class="dot"></span> 
+	  <span class="dot"></span> 
+	  <span class="dot"></span> 
+	</div>
+</div>	
+
+	<br><br><br><br><br><br>
+
+	<div class="backtotop">
+	<a href="#backtotop-heading"><img class="backtotop-img" src="Images/backtotop1.png" width="3%"></a>
+	</div>
+
+	<br>
+
+		<div class="bottom">
+				<div class="b-left">
+					<h4>&copy Since 2021</h4>
+					
+				</div>
+				<div class="b-middle">
+					<h4>Our Branches :</h4>
+					<ul>
+						<li> Gampaha</li><br>
+						<li> Colombo</li><br>
+						<li> Kandy </li><br>
+						
+					</ul>
+				</div>
+				<div class="b-right">
+					<h4> Find Us On :</h4>
+					<ul>
+						<li> Email: robot@gmail.com</li>
+					</ul>
+				</div>		
+		</div>
+		
+		
+
+
+
+
+	
+
+<script>
+	let slideIndex = 0;
+	showSlides();
+
+	function showSlides() {
+	  let i;
+	  let slides = document.getElementsByClassName("mySlides");
+	  let dots = document.getElementsByClassName("dot");
+	  for (i = 0; i < slides.length; i++) {
+		slides[i].style.display = "none";  
+	  }
+	  slideIndex++;
+	  if (slideIndex > slides.length) {slideIndex = 1}    
+	  for (i = 0; i < dots.length; i++) {
+		dots[i].className = dots[i].className.replace(" active", "");
+	  }
+	  slides[slideIndex-1].style.display = "block";  
+	  dots[slideIndex-1].className += " active";
+	  setTimeout(showSlides, 4000); // Change image every 2 seconds
+	}
+</script>
+
+</body>
+</html>
+

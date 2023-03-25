@@ -1,0 +1,33 @@
+.bottom{
+	clear: both;
+    background-color: black;
+    padding-top: 20px;
+    display: flex;
+    height: 180px;
+}
+
+h4, li{
+    color: #fff;
+}
+
+.b-left{
+    display:block;
+    align-items: center;
+    padding-left: 60px;
+    padding-top: 5px;
+    margin: 0px;
+}
+.b-middle{
+    display:block;
+    align-items: center;
+    padding-left: 300px;
+    padding-top: 5px;
+    margin: 0px;
+}
+.b-right{
+    display:block;
+    align-items: center;
+    padding-left: 300px;
+    padding-top: 5px;
+    margin: 0px;
+}

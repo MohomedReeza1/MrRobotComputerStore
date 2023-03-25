@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="eng">
+<head>
+   <meta charset="UTF-8">
+   <title>MR. ROBOT COMPUTER STORE</title>
+   <link rel="stylesheet" href="NavCSS.css"> 
+   <link rel = "icon" href = "images/logo1.png" >
+   <link rel="stylesheet" href="footer.css"> 
+
+<style> 
+   textarea{
+     vertical-align:top;
+     padding:3px;
+     box-shadow:0 17px 50px 0 rgba(0,0,0,0.19),0 12px 16px 0 rgba(0,0,0,0.24);
+     background-color:#ddd ;}
+	 
+  legend input{
+     padding:3px;
+     box-shadow:0 17px 50px 0 rgba(0,0,0,0.19),0 12px 16px 0 rgba(0,0,0,0.24);
+     background-color:#ddd;}	
+
+  label,.innerHTML{
+     color:white;
+     font-weight:bold;	 }  
+	 
+  .viewQuerybtn,#edit,#send {
+     border-radius:8px;
+     padding:10px;
+     color:white;
+     background-color:#710c04;	 }  
+	 
+   .viewQuerybtn:active{
+     transform:translateY(4px);}   
+	 
+	#topic{
+	 text-align:center;
+	 color:white;  }
+      	 
+   form{
+	 align-content: center;
+	 display: block;   
+	 width: fit-content;
+     margin: 10px auto;
+	 positin:relative;
+	 margin-top: 60px;
+	 font-size:20px; 
+	 border:3px solid white;
+	 padding:65px; }
+	 
+   .pageEditorBtn {
+	 padding: 7px;
+	 background-color: #9B1003;
+	 text-decoration: none;
+	 color: white;
+	 border-radius: 5px;
+	 width: 5%;
+	 clear: both;
+	 
+
+	
+
+	 
+
+	 
+</style>
+</head>	
+
+<body> 
+  <div id="backtotop-heading" class="mrrobot-div">
+	<a class="robot-a" href="Home.html"><input type="image" name="robot computer" src="images/logo1.png" border="2" alt="robot computer" width="5%"></a>
+	<a class="robot-b" href="Home.html"><input type="image" name="robot computer" src="images/mrrobot.png" border="2" alt="robot computer" width="65%"></a>
+  </div>
+
+	<div class="nav"> 
+		<ul>
+			<li><input type="button" class="btn1" value="Home" name="button1" onClick="window.location.href='Home.html'"></li>
+			<li><input type="button" class="btn1" value="Buy Products" name="button2" onClick="window.location.href='product.html'"></li>			
+			<li><input type="button" class="btn1" value="Query Form" name="button3"  onClick="window.location.href='queryform.html'" style="background-color:#9B1003;color:white;"></li>  <!--parent.open() opens page in new tab-->
+			<li><input type="button" class="btn1" value="Quiz" name="button4" onClick="window.location.href='quiz.html'"></li>			
+			<li><input type="button" class="btn1" value="About Us" name="button5" onClick="window.location.href='about us.html'"></li>			
+			<li><input type="button" class="btn1" value="Site Map" name="button6" onClick="window.location.href='sSitemap.html'"></li>
+			<li><input type="button" class="btn1" value="Student Details" name="button7" onClick="window.location.href='studentdetails.html'"></li>
+			<li><input type="button" class="btn1" value="Images" name="button8" onClick="window.location.href='thumbnail.html'"></li>
+		</ul>
+	</div>
+  
+  <br><br>
+
+
+  <form name="info" action="mailto:bobpiper150@gmail.com" id="myform" method="post"> 
+  <div id="infoForm">
+  <legend>
+  <h1 id="topic">Query Form</h1><br>
+    <label for="namee">Name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </label>
+	<input type="text" name="name" id="namee" placeholder="Enter name"><br><br>
+	
+	<label for="mail">Email address <label>
+	<input type="email" name="email" id="mail" placeholder="Enter email"><br><br>
+	
+	<label for="details">Details&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+	<textarea name="feedback" id="details" rows="10" cols="90" placeholder="Enter your feedback"></textarea><br><br>
+	
+	<label for="theme">Buying process</label>
+	<input type="radio" name="themee" id="theme" value="Buying process"><br>
+	
+	<label for="theme2">Refund policy&nbsp;&nbsp;</label>
+	<input type="radio" name="themee" id="theme2" value="Refund policy"><br>
+	
+	<label for="theme3">About Product</label>
+	<input type="radio" name="themee" id="theme3" value="About Product"><br><br>
+  </legend>
+	<input type="button" name="view" value="View Query" class="viewQuerybtn" onclick="return validate_form(info)"><br><br>
+	</div>
+	
+  <div id="summary">	
+	<span id="nAme"></span>
+	<span id="eMail"></span>
+	<span id="tHeme"></span>
+	<span id="dEtails"></span>
+	<input type="button" value="Edit" id="edit" onclick="editfunc()">
+	<input type="submit" value="submit" id="send" onclick="submitfunc()">
+  </div>	
+	
+  </form>
+
+
+	<div class="backtotop">
+	<a href="#backtotop-heading"><img class="backtotop-img" src="Images/backtotop1.png" width="3%"></a>
+	</div>	
+	
+	<div>
+	<a id="editor" class="pageEditorBtn" href="queryformPageEditor.html" target="_blank">Page Editor</a>
+	</div>
+
+	<br>
+
+		<div class="bottom">
+				<div class="b-left">
+					<h4>&copy Since 2021</h4>
+					
+				</div>
+				<div class="b-middle">
+					<h4>Our Branches :</h4>
+					<ul>
+						<li> Gampaha</li><br>
+						<li> Colombo</li><br>
+						<li> Kandy </li><br>
+						
+					</ul>
+				</div>
+				<div class="b-right">
+					<h4> Find Us On :</h4>
+					<ul>
+						<li> Email: robot@gmail.com</li>
+					</ul>
+				</div>		
+		</div>
+
+	
+ 
+ <script>
+
+     var summary = document.getElementById("summary");
+	 summary.style.display = "none";
+	 
+	function editfunc (){
+		    document.getElementById("infoForm").style.display="block";
+            summary.style.display = "none";
+        }
+    function submitfunc(){
+            summary.style.display = "none";
+        }
+		
+	
+    function validate_form (thisForm)
+    {
+    valid = true;
+	
+	document.getElementById("infoForm").style.display="none";
+
+    if ( document.info.name.value == "" )
+    {
+        alert ( "Please fill in the 'Name' field." );
+        valid = false;
+	}
+	if ( document.info.email.value == "" )
+	{
+        alert ( "Please fill in the 'Email' field." );
+        valid = false;
+    }
+	if ( document.info.feedback.value == "" )
+	{
+        alert ( "Please fill in the 'Details' field." );
+        valid = false;
+    }
+	if ( ( document.info.themee[0].checked == false )&& ( info.themee[1].checked == false )&& ( info.themee[2].checked == false ))
+	{
+        alert ( "Please select a theme" );
+        valid = false;
+    }
+	if (valid==false){
+	   location.reload(); }
+	
+	
+	let mailVar=document.info.email.value;
+    let feeedback=document.info.feedback.value;	
+	
+	if (valid==true){	
+         nAme.style.color="white"; 
+	     nAme.style.fontWeight="bold";
+	     eMail.style.color="white"; 
+	     eMail.style.fontWeight="bold";
+	     tHeme.style.color="white"; 
+	     tHeme.style.fontWeight="bold";
+	     dEtails.style.color="white"; 
+   	     dEtails.style.fontWeight="bold";
+ 	     nAme.style.fontSize="large";
+	     eMail.style.fontSize="large";
+	     tHeme.style.fontSize="large";
+	     dEtails.style.fontSize="large"; 
+	
+	   document.getElementById("nAme").innerHTML="Name:&nbsp;&nbsp; "+document.info.name.value+"<br>";
+   	   document.getElementById("eMail").innerHTML="Email:&nbsp;&nbsp;&nbsp;"+document.info.email.value+"<br>";
+   	   document.getElementById("tHeme").innerHTML="Subject:&nbsp;"+getRadioValue(thisForm)+"<br>";  
+ 	   document.getElementById("dEtails").innerHTML="Details:&nbsp;"+document.info.feedback.value+"<br><br>";  
+	
+	   summary.style.display = "block";
+	   
+	}	
+		
+		
+   return valid;
+    }                //end of validate_form() function
+	
+	
+   
+    function getRadioValue( radioArray ) {
+        for (let i=0; i < radioArray.length;i++){
+		    if ( radioArray[i].checked ){
+			    return radioArray[i].value;
+			}
+		}
+		return "";
+	}
+   
+    
+
+</script> 
+</body>
+</html>

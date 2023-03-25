@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+
+		<title>MR. ROBOT COMPUTER STORE</title>
+		<script src="quiz.js"></script>
+		<link rel="stylesheet" href="NavCSS.css"> 
+		<link rel="icon" href="images/logo1.png" >
+		<link rel="stylesheet" href="footer.css"> 
+		<style>
+
+			#que-container {
+				clear: both;
+				border-radius: 5px;
+				background-color: rgba(255,255,255, 1);
+				padding: 10px 20px 20px 20px;
+				float:left;
+				width:97%;
+			}
+			
+			#que-container, #submit-btn, #results-div-id {
+				display: none;
+			}
+			
+			.que-p {
+				font-size:20px;
+				clear: both;
+			}
+			
+			.questions {
+				font-family: Arial, Helvetica, sans-serif;
+				font-size: 18px;
+				clear: both;
+			}
+			
+			.para {
+				font-family:'Trebuchet MS', sans-serif;
+				font-size: 21px;
+				color: white;
+				text-align: center;	
+				margin: 50px 0 50px 0;				
+				padding: ;
+				clear: both;
+			}
+			
+			.topic-quiz {
+				font-family: 'Trebuchet MS', sans-serif;
+				color: white;
+				margin: 100px 0 80px 0;
+				text-align: center;
+				font-size: 4em; 
+				clear: both;
+			}
+
+			
+			.que-div {
+				width: 100%;
+				padding: 12px 20px;
+				margin: 8px 0;
+				display: inline-block;
+				border: 1px solid #c4c4c4;
+				border-radius: 4px;
+				box-sizing: border-box;
+				clear: both;
+			}
+			
+			.submit-btn {
+				width: 100%;
+				background-color: #9B1003;
+				color: white;
+				margin-top: 20px;
+				padding: 14px 20px;
+				border: none;
+				border-radius: 4px;
+				cursor: pointer;
+				font-size:20px;
+			}
+			
+			
+			.submit-btn:hover {
+				background-color: #710c04;
+				clear: both;
+			}			
+			
+			.start-btn {
+				background-color: #9B1003;
+				color: white;
+				padding: 14px 20px;
+				border: none;
+				border-radius: 4px;
+				cursor: pointer;
+				font-size:20px;
+				margin-left: 700px;
+				margin-top: 40px;
+			}
+			
+			.start-btn:hover {
+				background-color: #710c04;
+				clear: both;
+			}
+			
+			
+			.result-class {
+				font-family: 'Trebuchet MS', sans-serif;
+				color: white;
+				text-align: center;
+				padding: 10px;
+				font-size: 30px;
+				clear: both;
+			}
+			
+			.countdown {
+				font-size: 20px;
+				color: #ff0000;
+				text-align: center;
+				clear: both;
+			}
+		
+
+			.tick {
+				color: #00d900;
+				clear: both;
+			}
+			
+			.editor {
+				padding: 7px;
+				background-color: #9B1003;
+				text-decoration: none;
+				color: white;
+				border-radius: 5px;
+				width: 5%;
+				clear: both;
+			}
+			.time {
+				font-size: 25px;
+			}
+			
+			.quiz-border{
+				margin-bottom: 50px;
+				background-color: rgba(0,0,100, .5);
+				border: 1px solid #808080;
+				border-radius: 15px;
+				position: relative;
+				top: 50px;
+			}
+			
+
+			.result-link {
+				text-decoration: none;
+			}
+			
+			.results-div {
+				background-color: rgba(242,242,242, .3);
+				position: relative;
+				left: 170px;
+				width: 50%;
+				border: 2px solid #808080;
+				border-radius: 15px;
+				padding: 200px;
+				margin-top: 50px;
+			}
+			
+			.backtotop {
+				clear: both;
+			}			
+		</style>
+		
+		
+	</head>
+
+	<body>
+	
+		<div id="backtotop-heading" class="mrrobot-div">
+		<a class="robot-a" href="Home.html"><input type="image" name="robot computer" src="images/logo1.png" alt="robot computer" width="5%"></a>
+		<a class="robot-b" href="Home.html"><input type="image" name="robot computer" src="images/mrrobot.png" alt="robot computer" width="65%"></a>
+		</div>
+		
+		<div class="nav"> 
+			<ul>
+				<li><input type="button" class="btn1" value="Home" name="button1" onClick="window.location.href='Home.html'"></li>
+				<li><input type="button" class="btn1" value="Buy Products" name="button2" onClick="window.location.href='product.html'"></li>			
+				<li><input type="button" class="btn1" value="Query Form" name="button3"  onClick="window.location.href='queryform.html'" ></li>  <!--parent.open() opens page in new tab-->
+				<li><input type="button" class="btn1" value="Quiz" name="button4" onClick="window.location.href='quiz.html'"  style="background-color:#9B1003;color:white;"></li>			
+				<li><input type="button" class="btn1" value="About Us" name="button5" onClick="window.location.href='about us.html'"></li>			
+				<li><input type="button" class="btn1" value="Site Map" name="button6" onClick="window.location.href='sSitemap.html'"></li>
+				<li><input type="button" class="btn1" value="Student Details" name="button7" onClick="window.location.href='studentdetails.html'"></li>
+				<li><input type="button" class="btn1" value="Images" name="button8" onClick="window.location.href='thumbnail.html'"></li>
+			</ul>
+		</div>
+
+
+
+		<div class="quiz-border">
+			<h1 class="topic-quiz">Quiz</h1>
+		
+			<p class="para">A short quiz to test your general knowledge about computers.</p>
+			
+			<br><br>
+			
+				<a href="#que-container">	
+					<input type="button" id="start-btn-hide" class="start-btn" name="startbutton" value="Start Quiz" onclick="myTimer()">
+				</a>
+
+				<br><br><br><br><br><br>
+		</div>
+		
+
+		
+		<br><br><br>
+		
+		<div id="que-container" class="que-container">
+		
+			<form name="quiz" id="quiz" class="questions">
+				
+				<div class="timer-div">
+					<b><p class="countdown"id='timer'></p></b>
+				</div>			
+			
+				<div id="que1" class="que-div">
+					<p id="Q1" class="que-p">1. Who is the father of Computer?</p>
+					
+					<input type="radio" name="q1" id="allen" value="allen">
+					<label for="allen" id="label1.1">Allen Turing</label><br>
+
+					<input type="radio" name="q1" id="charles" value="charles">
+					<label for="charles" id="label1.2">Charles Babbage <span id="check1" class="tick"></span></label><br>
+					
+					<input type="radio" name="q1" id="cray" value="cray">
+					<label for="cray" id="label1.3">Simur Cray</label><br>
+
+					<input type="radio" name="q1" id="augusta" value="augusta">
+					<label for="augusta" id="label1.4">Augusta Adaming</label><br><br>
+				</div>
+				
+				<div id="que2" class="que-div">
+					<p id="Q2" class="que-p">2. Which of these is a free operating system?</p>
+					
+					<input type="radio" name="q2" id="win10" value="win10">
+					<label for="win10" id="label2.1">Windows 10</label><br>
+
+					<input type="radio" name="q2" id="ubuntu" value="ubuntu">
+					<label for="ubuntu" id="label2.2">Ubuntu <span id="check2" class="tick"></span></label><br>
+					
+					<input type="radio" name="q2" id="winxp" value="winxp">
+					<label for="winxp" id="label2.3">Windows Xp</label><br>
+
+					<input type="radio" name="q2" id="mac" value="mac">
+					<label for="mac" id="label2.4">Mac OS</label><br><br>
+				</div>
+				
+				<div id="que3" class="que-div">
+					<p id="Q3" class="que-p">3. 1024 bit is equal to how many byte?</p>
+					
+					<input type="radio" name="q3" id="1byte" value="1byte">
+					<label for="1byte" id="label3.1">1 Byte</label><br>
+					
+					<input type="radio" name="q3" id="32byte" value="32byte">
+					<label for="32byte" id="label3.2">32 Byte</label><br>
+					
+					<input type="radio" name="q3" id="64byte" value="64byte">
+					<label for="64byte" id="label3.3">64 Byte</label><br>
+					
+					<input type="radio" name="q3" id="128byte" value="128byte">
+					<label for="128byte" id="label3.4">128 Byte <span id="check3" class="tick"></span></label><br><br>
+				</div>
+				
+				<div id="que4" class="que-div">
+					<p id="Q4" class="que-p">4. A computer use which type of number system to calculate and to store data?</p>
+
+					<input type="radio" name="q4" id="binary" value="binary">
+					<label for="binary" id="label4.1">Binary <span id="check4" class="tick"></span></label><br>
+
+					<input type="radio" name="q4" id="decimal" value="decimal">
+					<label for="decimal" id="label4.2">Decimal</label><br>
+					
+					<input type="radio" name="q4" id="octal" value="octal">
+					<label for="octal" id="label4.3">Octal</label><br>
+
+					<input type="radio" name="q4" id="hexadecimal" value="hexadecimal">
+					<label for="hexadecimal" id="label4.4">Hexadecimal</label><br><br>
+				</div>
+				
+				<div id="que5" class="que-div">
+					<p id="Q5" class="que-p">5. Which cable is used to connect a hard drive to a motherboard?</p>
+					
+					<input type="radio" name="q5" id="usb" value="usb">
+					<label for="usb" id="label5.1">A USB Cable</label><br>
+
+					<input type="radio" name="q5" id="ide" value="ide">
+					<label for="ide" id="label5.2">An IDE Cable</label><br>
+				
+					<input type="radio" name="q5" id="sata" value="sata">
+					<label for="sata" id="label5.3">A SATA Cable <span id="check5" class="tick"></span></label><br>
+
+					<input type="radio" name="q5" id="ps2" value="ps2">
+					<label for="ps2" id="label5.4">A PS2 Cable</label><br><br>
+				</div>
+
+				<div id="que6" class="que-div">
+					<p id="Q6" class="que-p">6. Number of bit used by the IPv6 address?</p>
+					
+					<input type="radio" name="q6" id="32bit" value="32bit">
+					<label for="32bit" id="label6.1">32 bit</label><br>
+
+					<input type="radio" name="q6" id="64bit" value="64bit">
+					<label for="64bit" id="label6.2">64 bit</label><br>
+					
+					<input type="radio" name="q6" id="128bit" value="128bit">
+					<label for="128bit" id="label6.3">128 bit <span id="check6" class="tick"></span></label><br>
+
+					<input type="radio" name="q6" id="256bit" value="256bit">
+					<label for="256bit" id="label6.4">256 bit</label><br><br>
+				</div>
+
+				<div id="que7" class="que-div">
+					<p id="Q7" class="que-p">7. Which one of the followings is a programming language?</p>
+					
+					<input type="radio" name="q7" id="http" value="http">
+					<label for="http" id="label7.1">HTTP</label><br>
+
+					<input type="radio" name="q7" id="html" value="html">
+					<label for="html" id="label7.2">HTML <span id="check7" class="tick"></span></label><br>
+					
+					<input type="radio" name="q7" id="hpml" value="hpml">
+					<label for="hpml" id="label7.3">HPML</label><br>
+
+					<input type="radio" name="q7" id="ftp" value="ftp">
+					<label for="ftp" id="label7.4">FTP</label><br><br>
+				</div>
+
+				<div id="que8" class="que-div">
+					<p id="Q8" class="que-p">8. Mac Operating System is developed by which company?</p>
+					
+					<input type="radio" name="q8" id="apple" value="apple">
+					<label for="apple" id="label8.1">Apple <span id="check8" class="tick"></span></label><br>
+
+					<input type="radio" name="q8" id="ibm" value="ibm">
+					<label for="ibm" id="label8.2">IBM</label><br>
+					
+					<input type="radio" name="q8" id="microsoft" value="microsoft">
+					<label for="microsoft" id="label8.3">Microsoft</label><br>
+
+					<input type="radio" name="q8" id="samsung" value="samsung">
+					<label for="samsung" id="label8.4">Samsung</label><br><br>
+				</div>
+
+				<div id="que9" class="que-div">
+					<p id="Q9" class="que-p">9. What is the first general-purpose electronic digital computer?</p>
+					
+					<input type="radio" name="q9" id="univac" value="univac">
+					<label for="univac" id="label9.1">UNIVAC <span id="check9" class="tick"></span></label><br>
+
+					<input type="radio" name="q9" id="edvac" value="edvac">
+					<label for="edvac" id="label9.2">EDVAC</label><br>
+					
+					<input type="radio" name="q9" id="eniac" value="eniac">
+					<label for="eniac" id="label9.3">ENIAC</label><br>
+
+					<input type="radio" name="q9" id="ibm-701" value="ibm-701">
+					<label for="ibm-701" id="label9.4">IBM-701</label><br><br>
+				</div>
+
+				<div id="que10" class="que-div">
+					<p id="Q10" class="que-p">10. Firewall in computer is used for?</p>
+					
+					<input type="radio" name="q10" id="transmission" value="transmission">
+					<label for="transmission" id="label10.1">Data Transmission</label><br>
+
+					<input type="radio" name="q10" id="authentication" value="authentication">
+					<label for="authentication" id="label10.2">Authentication</label><br>
+					
+					<input type="radio" name="q10" id="monitoring" value="monitoring">
+					<label for="monitoring" id="label10.3">Monitoring</label><br>
+
+					<input type="radio" name="q10" id="security" value="security">
+					<label for="security" id="label10.4">Security <span id="check10" class="tick"></span></label><br><br>
+				</div>
+
+			<div class="timer-div">
+				<b><p class="countdown" id='timer2'></p></b>
+			</div>
+		
+		</div>
+		
+			<div class="submit-btn-div">
+				<a href="#que-container" class="result-link">
+				<input type="button" id="submit-btn" class="submit-btn" value="Submit" name="submitbutton" onClick="mySubmitButton(this.form);">
+				</a>
+			</div>
+		</form>
+		
+
+		
+		<div id="results-div-id" class="results-div">
+			<p id="result-id" class="result-class"></p>
+		</div>
+		
+		<br><br><br><br><br>
+		
+		<div class="backtotop">
+			<a href="#backtotop-heading"><img class="backtotop-img" src="Images/backtotop1.png" width="3%"></a>
+		</div>
+		
+		<br>
+		
+		<div>
+			<a id="editor" class="editor" href="quizpageeditor.html" target="_blank">Page Editor</a>
+		</div>
+		
+		<br>
+		
+		<div class="bottom">
+			<div class="b-left">
+				<h4>&copy Since 2021</h4>
+			</div>
+			
+			<div class="b-middle">
+				<h4>Our Branches :</h4>
+				<ul>
+					<li> Gampaha</li><br>
+					<li> Colombo</li><br>
+					<li> Kandy </li><br>	
+				</ul>
+			</div>
+			
+			<div class="b-right">
+				<h4> Find Us On :</h4>
+				<ul>
+					<li> Email: robot@gmail.com</li>
+				</ul>
+			</div>	
+		</div>
+
+	
+	</body>
+</html>

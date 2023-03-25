@@ -1,0 +1,69 @@
+
+h1
+{
+    color: aliceblue;
+    font-family: verdana;
+    text-align: center;
+    font-size: 60px;
+    margin-top: 40px;
+    margin-bottom: 0%;
+}
+h2{
+    font-family: verdana;
+    text-align: center;
+    font-size: 40px;
+    color: orangered;
+    margin-top: 0%;
+}
+text
+{
+    fill: azure;
+}
+path{
+    stroke: rgb(182, 192, 212);
+    stroke-width: 5px;
+    fill: none;
+}
+.box
+{
+    stroke-width: 1;
+    stroke: azure; 
+   
+}
+
+.colourRep
+{
+    stroke-width: 1;
+    stroke: azure;
+}
+
+
+
+#PresentationGroup
+{
+    fill: #0f2647;
+}
+
+#homePage
+{
+    fill: #2a3b68;
+}
+
+#Stage2
+{
+    fill: #314b64;
+}
+
+#Stage3
+{
+    fill: #537ba1;
+}
+
+.editor
+{
+    float: right;
+}
+
+		.backtotop {
+			text-align: right;
+		}	

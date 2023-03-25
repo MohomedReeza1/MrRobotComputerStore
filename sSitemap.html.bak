@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>MR. ROBOT</title>
+        <link rel="stylesheet" href="sSitemap.css">
+        <link rel="stylesheet" href="NavCSS.css">
+		<link rel="icon" href="images/logo1.png">
+		<link rel="stylesheet" href="footer.css"> 
+
+        <style>
+            .pageEditorBtn {
+                padding: 7px;
+                background-color: #9B1003;
+                text-decoration: none;
+                color: white;
+                border-radius: 5px;
+                width: 5%;
+                clear: both;
+            }
+        </style>
+		
+    </head>
+    <body>
+	
+		<div id="backtotop-heading" class="mrrobot-div">
+		<a class="robot-a" href="Home.html"><input type="image" name="robot computer" src="images/logo1.png" alt="robot computer" width="5%"></a>
+		<a class="robot-b" href="Home.html"><input type="image" name="robot computer" src="images/mrrobot.png" alt="robot computer" width="65%"></a>
+		</div>
+    
+		<div class="nav"> 
+			<ul>
+				<li><input type="button" class="btn1" value="Home" name="button1" onClick="window.location.href='Home.html'"></li>
+				<li><input type="button" class="btn1" value="Buy Products" name="button2" onClick="window.location.href='product.html'"></li>			
+				<li><input type="button" class="btn1" value="Query Form" name="button3"  onClick="window.location.href='queryform.html'" ></li>  <!--parent.open() opens page in new tab-->
+				<li><input type="button" class="btn1" value="Quiz" name="button4" onClick="window.location.href='quiz.html'"></li>			
+				<li><input type="button" class="btn1" value="About Us" name="button5" onClick="window.location.href='about us.html'"></li>			
+				<li><input type="button" class="btn1" value="Site Map" name="button6" onClick="window.location.href='sSitemap.html'" style="background-color:#9B1003;color:white;"></li>
+				<li><input type="button" class="btn1" value="Student Details" name="button7" onClick="window.location.href='studentdetails.html'"></li>
+				<li><input type="button" class="btn1" value="Images" name="button8" onClick="window.location.href='thumbnail.html'"></li>
+			</ul>
+		</div>
+
+
+        <a name="top"></a>
+
+        <h1>Site Map</h1>
+		<br>
+        <h2><i>This is how we did...</i></h2>
+        <hr>
+
+
+	<div class="svg-content">
+        <svg width="1780" height="1050">
+                
+            <g id="siteMap" transform="translate(-30,-5)">
+                <g id="PresentationGroup">
+                    <rect class="box"  x="600" y="50" width="300" height="70"/>
+                    <a xlink:type="simple" xlink:href="presentation.html">
+                        <text x="680" y="90">Presentation Page</text>
+                    </a>
+
+                
+                <g id="Stage1">
+                    <g id="homePage">
+                        <path d="M 750 120 v 50"/>
+                        <rect class="box"  x="600" y="170" width="300" height="70"/>
+                        <a xlink:type="simple" xlink:href="Home.html">
+                            <text x="710" y="210">Home Page</text>
+                        </a>
+
+                    
+                    </g>
+                </g>
+
+                <g id="Stage2" >  <!-- transform="translate(10,0)" -->
+                    <path d="M 750 240 v 50"/>
+                    <path d="M 129 289 h 1400"/>
+
+                    <g id="homeBranch1" transform="translate(-10,0)">
+                        <path d="M 140 288 v 50"/>
+                        <rect class="box"  x="50" y="339" width="180" height="70"/>
+                        <a xlink:type="simple" xlink:href="product.html">
+                            <text x="90" y="380" style="text-align:center">Buy Products</text>
+                        </a>
+                    </g>
+
+                    <g id="homeBranch2" transform="translate(230,0)">
+                        <path d="M 145 288 v 50"/>
+                        <rect class="box"  x="50" y="339" width="180" height="70"/>
+                        <a xlink:type="simple" xlink:href="queryform.html">
+                            <text x="110" y="380" style="text-align:center">Query</text>
+                        </a>
+                    </g>
+
+                    <g id="homeBranch3" transform="translate(460,0)">
+                        <path d="M 140 288 v 50"/>
+                        <rect class="box"  x="40" y="339" width="180" height="70"/>
+                        <a xlink:type="simple" xlink:href="quiz.html">
+                            <text x="110" y="380" style="text-align:center">Quiz</text>
+                        </a>
+                    </g>
+
+                    <g id="homeBranch4" transform="translate(700,0)">
+                        <path d="M 120 288 v 50"/>
+                        <rect class="box"  x="30" y="339" width="180" height="70"/>
+                        <a xlink:type="simple" xlink:href="about us.html">
+                        <text x="80" y="380">About Us</text>
+                        </a>
+                    </g>
+
+                    <g id="homeBranch5" transform="translate(950,0)">
+                        <path d="M 110 288 v 50"/>
+                        <rect class="box"  x="25" y="339" width="180" height="70"/>
+                        <a xlink:type="simple" xlink:href="sSitemap.html">
+                        <text x="78" y="380">Site Map</text>
+                        </a>
+                    </g>
+
+                    <g id="homeBranch6" transform="translate(1200,0)">
+                        <path d="M 100 288 v 50"/>
+                        <rect class="box"  x="20" y="339" width="180" height="70"/>
+                        <a xlink:type="simple" xlink:href="studentdetails.html">
+                        <text x="60" y="380">Student Details</text>
+                        </a>
+                    </g>
+                    <g id="homeBranch7" transform="translate(1450,0)">
+                        <path d="M 80 288 v 50"/>
+                        <rect class="box"  x="20" y="339" width="180" height="70"/>
+                        <a xlink:type="simple" xlink:href="thumbnail.html">
+                        <text x="80" y="380">Images</text>
+                        </a>
+                    </g>
+
+                
+                </g>
+
+
+                <!-- Branch 1 Buy Produts -->
+                <g id="Stage3">
+                    <g id="branchProducts">
+                        <path d="M 130 410 v 91"/>
+
+                        <!-- image 1 -->
+                        <g id="branchProducts1">
+                            <path d="M 129 500 h 51"/>
+                            <rect class="box"  x="180" y="470" width="150" height="60"/>
+                            <a xlink:type="simple" xlink:href="quizpageeditor.html">
+                                <text x="210" y="497">Page Editor</text>
+                                <text x="215" y="518">Student 1</text>
+                            </a>
+                        </g>
+                    </g>
+
+
+                    <!-- Branch 2 Query -->
+                    <g id="queryBranch" transform="translate(246,0)">
+                        <path d="M 130 410 v 91"/>
+
+                        <g id="queryBranch1">
+                            <path d="M 129 500 h 51"/>
+                            <rect class="box"  x="180" y="470" width="150" height="60"/>
+                            <a xlink:type="simple" xlink:href="student1.html">
+                                <text x="210" y="497">Page Editor</text>
+                                <text x="215" y="518">Student 2</text>
+                            </a>
+                        </g>
+
+                    </g>
+
+                    <!-- Branch 3 Quiz -->
+                    <g id="quizBranch" transform="translate(450,0)">
+                        <path d="M 150 410 v 91"/><!-- Branch root Root left 1 -->
+
+                        <g id="quizBranch1" >
+                            <path d="M 149 500 h 51"/>
+                            <rect class="box"  x="180" y="470" width="150" height="60"/>
+                            <a xlink:type="simple" xlink:href="sdpageeditor.html">
+                                <text x="210" y="497">Page Editor</text>
+                                <text x="215" y="518">Student 3</text>
+                            </a>
+                        </g>
+
+                    </g>
+
+
+                    <!-- branch 4 About us -->
+                    <g id="aboutUs" transform="translate(690,0)">
+                        <path d="M 130 410 v 91"/><!-- Student Root root4 -->
+
+                        <g id="aboutusBranch1">
+                            <path d="M 129 500 h 51"/>
+                            <rect class="box"  x="180" y="470" width="150" height="60"/>
+                            <a xlink:type="simple" xlink:href="#">
+                                <text x="210" y="497">Page Editor</text>
+                                <text x="215" y="518">Student 1,2,3,4</text>
+                            </a>
+                        </g>
+                    </g>
+
+                    <!-- branch 5 sitemap -->
+                    <g id="sitemapBranch" transform="translate(940,0)">
+                        <path d="M 120 410 v 91"/><!-- Student Root root5 -->
+
+                        <g id="sitemapBranch1">
+                            <path d="M 120 500 h 45"/>
+                            <rect class="box"  x="160" y="470" width="140" height="60"/>
+                            <a xlink:type="simple" xlink:href="student4.html">
+                                <text x="190" y="497">Page Editor</text>
+                                <text x="195" y="518">Student 4</text>
+                            </a>
+                        </g>
+
+                    </g>
+
+                    <!-- branch 6 Student Details -->
+                    <g id="studentBranch" transform="translate(1182,0)">
+                        <path d="M 120 410 v 91"/><!-- Student Root root6 -->
+
+                        <!--image 1 -->
+                        <g id="studentBranch1">
+                            <path d="M 119 500 h 51"/>
+                            <rect class="box"  x="170" y="470" width="150" height="60"/>
+                            <a xlink:type="simple" xlink:href="sdpageeditor.html">
+                                <text x="200" y="497">Page Editor</text>
+                                <text x="205" y="518">Student 3</text>
+                            </a>
+                        </g>
+
+                    </g>
+
+                     <!-- branch 6 image -->
+                    <g id="imageBranch" transform="translate(1432,0)">
+                        <path d="M 100 410 v 91"/><!-- Student Root root6 -->
+
+                        <!--image 1 -->
+                        <g id="imageBranch1">
+                            <path d="M 100 500 h 51"/>
+                            <rect class="box"  x="150" y="470" width="150" height="60"/>
+                            <a xlink:type="simple" xlink:href="student4.html">
+                                <text x="190" y="497">Page Editor</text>
+                                <text x="195" y="518">Student 4</text>
+                            </a>
+                        </g>
+
+                    </g>
+
+                </g>
+
+            </g>
+
+        </svg>
+	</div>	
+		
+
+		
+	<div class="backtotop">
+        <a href="#backtotop-heading"><img class="backtotop-img" src="Images/backtotop1.png" width="3%"></a>
+    </div>
+        
+
+	
+    <div>
+        <a id="editor" class="pageEditorBtn" href="student4.html" target="_blank">Page Editor</a>
+    </div>	
+
+	<br>	
+	
+	<div class="bottom">
+		<div class="bottom">
+				<div class="b-left">
+					<h4>&copy Since 2021</h4>
+					
+				</div>
+				<div class="b-middle">
+					<h4>Our Branches :</h4>
+					<ul>
+						<li> Gampaha</li><br>
+						<li> Colombo</li><br>
+						<li> Kandy </li><br>
+						
+					</ul>
+				</div>
+				<div class="b-right">
+					<h4> Find Us On :</h4>
+					<ul>
+						<li> Email: robot@gmail.com</li>
+					</ul>
+				</div>		
+		</div>
+
+	
+</body>
+</html>

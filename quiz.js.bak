@@ -1,0 +1,356 @@
+var countdown = 60;
+//console.log("Time is " + time);
+	
+function myTimer() {
+	
+	displayContent();
+	hideStartQuizButton();
+
+	
+	document.getElementById('timer').innerHTML = "Time remaining : " + countdown + " seconds";
+	document.getElementById('timer2').innerHTML = "Time remaining : " + countdown + " seconds";
+	countdown--;
+	
+	let time1;
+	
+	//time remaining on the quiz is shown as zero when countdown == -1 is checked.
+	if (countdown == -1) {
+		clearTimeout(time);
+		alert("Time out!");
+		time1 = 0;
+		//mySubmitButton(myFormRef);
+		//console.log("Time is " + countdown);
+	
+
+	
+	} else {
+		var time = setTimeout(myTimer, 1000);
+		//console.log("Time is " + time);
+	}
+	
+	let duration = 60 - time1;
+	
+}
+
+
+function displayContent() {
+	document.getElementById("que-container").style.display="block";
+	document.getElementById("submit-btn").style.display="block";
+	document.getElementById("editor").style.display="block";
+
+}
+
+
+function hideStartQuizButton() {
+	document.getElementById("start-btn-hide").style.display="none";
+}
+
+
+
+function getRadioValue( radioArray ) {
+   for ( let i = 0; i < radioArray.length; i++ ) {
+      if ( radioArray[ i ].checked ) { 
+         return radioArray[ i ].value;
+      }
+   }
+   return "";
+}
+
+
+function myFunction() {
+	time1 = countdown;	
+}
+
+
+function mySubmitButton(myFormRef) {
+	//element.addEventListener("click", myFunction);
+	//clearTimeout(time);
+
+	document.getElementById("timer").style.display="none";
+	document.getElementById("timer2").style.display="none";
+	
+	let totalMarks = 0;
+	document.getElementById("check1").innerHTML = "&#10004";	
+	document.getElementById("check2").innerHTML = "&#10004";	
+	document.getElementById("check3").innerHTML = "&#10004";	
+	document.getElementById("check4").innerHTML = "&#10004";	
+	document.getElementById("check5").innerHTML = "&#10004";	
+	document.getElementById("check6").innerHTML = "&#10004";	
+	document.getElementById("check7").innerHTML = "&#10004";	
+	document.getElementById("check8").innerHTML = "&#10004";	
+	document.getElementById("check9").innerHTML = "&#10004";	
+	document.getElementById("check10").innerHTML = "&#10004";	
+	
+	//for question1
+	let selectedRadioOption1 = getRadioValue(myFormRef.q1);
+	
+	if (selectedRadioOption1 == "allen") {
+		document.getElementById("label1.1").style.color = "#ff0000";
+		totalMarks = totalMarks - 1;
+		
+	} else if (selectedRadioOption1 == "charles"){
+		document.getElementById("label1.2").style.color = "#00d900";
+		totalMarks = totalMarks + 2;
+	
+	} else if (selectedRadioOption1 == "cray"){
+		document.getElementById("label1.3").style.color = "#ff0000";
+		totalMarks = totalMarks - 1;
+	
+	} else if (selectedRadioOption1 == "augusta"){
+		document.getElementById("label1.4").style.color = "#ff0000";
+		totalMarks = totalMarks - 1;
+
+	} else {
+		document.getElementById("label1.2").style.color = "#00d900";
+	}
+		
+		
+	//for question2
+	let selectedRadioOption2 = getRadioValue(myFormRef.q2);
+	
+	if (selectedRadioOption2 == "win10") {
+		document.getElementById("label2.1").style.color = "#ff0000";
+		totalMarks = totalMarks - 1;
+		
+	} else if (selectedRadioOption2 == "ubuntu"){
+		document.getElementById("label2.2").style.color = "#00d900";
+		totalMarks = totalMarks + 2;
+	
+	} else if (selectedRadioOption2 == "winxp"){
+		document.getElementById("label2.3").style.color = "#ff0000";
+		totalMarks = totalMarks - 1;
+	
+	} else if (selectedRadioOption2 == "mac"){
+		document.getElementById("label2.4").style.color = "#ff0000";
+		totalMarks = totalMarks - 1;
+	} else {
+		document.getElementById("label2.2").style.color = "#00d900";
+	}
+
+	//for question3
+	let selectedRadioOption3 = getRadioValue(myFormRef.q3);
+	
+	if (selectedRadioOption3 == "1byte") {
+		document.getElementById("label3.1").style.color = "#ff0000";
+		totalMarks = totalMarks - 1;
+		
+	} else if (selectedRadioOption3 == "32byte"){
+		document.getElementById("label3.2").style.color = "#ff0000";
+		totalMarks = totalMarks - 1;
+	
+	} else if (selectedRadioOption3 == "64byte"){
+		document.getElementById("label3.3").style.color = "#ff0000";
+		totalMarks = totalMarks - 1;
+	
+	} else if (selectedRadioOption3 == "128byte"){
+		document.getElementById("label3.4").style.color = "#00d900";
+		totalMarks = totalMarks + 2;
+		
+	} else {
+		document.getElementById("label3.4").style.color = "#00d900";
+	}
+
+
+
+	//for question4
+	let selectedRadioOption4 = getRadioValue(myFormRef.q4);
+	
+	if (selectedRadioOption4 == "binary") {
+		document.getElementById("label4.1").style.color = "#00d900";
+		totalMarks = totalMarks + 2;
+		
+	} else if (selectedRadioOption4 == "decimal"){
+		document.getElementById("label4.2").style.color = "#ff0000";
+		totalMarks = totalMarks - 1;
+	
+	} else if (selectedRadioOption4 == "octal"){
+		document.getElementById("label4.3").style.color = "#ff0000";
+		totalMarks = totalMarks - 1;
+	
+	} else if (selectedRadioOption4 == "hexadecimal"){
+		document.getElementById("label4.4").style.color = "#ff0000";
+		totalMarks = totalMarks - 1;
+		
+	} else {
+		document.getElementById("label4.1").style.color = "#00d900";
+	}
+
+
+
+	//for question5
+	let selectedRadioOption5 = getRadioValue(myFormRef.q5);
+	
+	if (selectedRadioOption5 == "usb") {
+		document.getElementById("label5.1").style.color = "#ff0000";
+		totalMarks = totalMarks - 1;
+		
+	} else if (selectedRadioOption5 == "ide"){
+		document.getElementById("label5.2").style.color = "#ff0000";
+		totalMarks = totalMarks - 1;
+	
+	} else if (selectedRadioOption5 == "sata"){
+		document.getElementById("label5.3").style.color = "#00d900";
+		totalMarks = totalMarks + 2;
+	
+	} else if (selectedRadioOption5 == "ps2"){
+		document.getElementById("label5.4").style.color = "#ff0000";
+		totalMarks = totalMarks - 1;
+		
+	} else {
+		document.getElementById("label5.3").style.color = "#00d900";
+	}
+
+
+
+	//for question6
+	let selectedRadioOption6 = getRadioValue(myFormRef.q6);
+	
+	if (selectedRadioOption6 == "32bit") {
+		document.getElementById("label6.1").style.color = "#ff0000";
+		totalMarks = totalMarks - 1;
+		
+	} else if (selectedRadioOption6 == "64bit"){
+		document.getElementById("label6.2").style.color = "#ff0000";
+		totalMarks = totalMarks - 1;
+	
+	} else if (selectedRadioOption6 == "128bit"){
+		document.getElementById("label6.3").style.color = "#00d900";
+		totalMarks = totalMarks + 2;
+	
+	} else if (selectedRadioOption6 == "256bit"){
+		document.getElementById("label6.4").style.color = "#ff0000";
+		totalMarks = totalMarks - 1;
+		
+	} else {
+		document.getElementById("label6.3").style.color = "#00d900";
+	}
+
+
+
+	//for question7
+	let selectedRadioOption7 = getRadioValue(myFormRef.q7);
+	
+	if (selectedRadioOption7 == "http") {
+		document.getElementById("label7.1").style.color = "#ff0000";
+		totalMarks = totalMarks - 1;
+		
+	} else if (selectedRadioOption7 == "html"){
+		document.getElementById("label7.2").style.color = "#00d900";
+		totalMarks = totalMarks + 2;
+	
+	} else if (selectedRadioOption7 == "hpml"){
+		document.getElementById("label7.3").style.color = "#ff0000";
+		totalMarks = totalMarks - 1;
+	
+	} else if (selectedRadioOption7 == "ftp"){
+		document.getElementById("label7.4").style.color = "#ff0000";
+		totalMarks = totalMarks - 1;
+	} else {
+		document.getElementById("label7.2").style.color = "#00d900";
+	}
+
+
+
+	//for question8
+	let selectedRadioOption8 = getRadioValue(myFormRef.q8);
+	
+	if (selectedRadioOption8 == "apple") {
+		document.getElementById("label8.1").style.color = "#00d900";
+		totalMarks = totalMarks + 2;
+		
+	} else if (selectedRadioOption8 == "ibm"){
+		document.getElementById("label8.2").style.color = "#ff0000";
+		totalMarks = totalMarks - 1;
+	
+	} else if (selectedRadioOption8 == "microsoft"){
+		document.getElementById("label8.3").style.color = "#ff0000";
+		totalMarks = totalMarks - 1;
+	
+	} else if (selectedRadioOption8 == "samsung"){
+		document.getElementById("label8.4").style.color = "#ff0000";
+		totalMarks = totalMarks - 1;
+		
+	} else {
+		document.getElementById("label8.1").style.color = "#00d900";
+	}
+
+
+
+	//for question9
+	let selectedRadioOption9 = getRadioValue(myFormRef.q9);
+	
+	if (selectedRadioOption9 == "univac") {
+		document.getElementById("label9.1").style.color = "#00d900";
+		totalMarks = totalMarks + 2;
+		
+	} else if (selectedRadioOption9 == "edvac"){
+		document.getElementById("label9.2").style.color = "#ff0000";
+		totalMarks = totalMarks - 1;
+	
+	} else if (selectedRadioOption9 == "eniac"){
+		document.getElementById("label9.3").style.color = "#ff0000";
+		totalMarks = totalMarks - 1;
+	
+	} else if (selectedRadioOption9 == "ibm-701"){
+		document.getElementById("label9.4").style.color = "#ff0000";
+		totalMarks = totalMarks - 1;
+		
+	} else {
+		document.getElementById("label9.1").style.color = "#00d900";
+	}
+
+
+
+	//for question10
+	let selectedRadioOption10 = getRadioValue(myFormRef.q10);
+	
+	if (selectedRadioOption10 == "transmission") {
+		document.getElementById("label10.1").style.color = "#ff0000";
+		totalMarks = totalMarks - 1;
+		
+	} else if (selectedRadioOption10 == "authentication"){
+		document.getElementById("label10.2").style.color = "#ff0000";
+		totalMarks = totalMarks - 1;
+	
+	} else if (selectedRadioOption10 == "monitoring"){
+		document.getElementById("label10.3").style.color = "#ff0000";
+		totalMarks = totalMarks - 1;
+	
+	} else if (selectedRadioOption10 == "security"){
+		document.getElementById("label10.4").style.color = "#00d900";
+		totalMarks = totalMarks + 2;
+		
+	} else {
+		document.getElementById("label10.4").style.color = "#00d900";
+	}
+
+
+	console.log(totalMarks);
+	document.getElementById("result-id").innerHTML = "Your Marks :  " + totalMarks;
+
+	
+	if (totalMarks >= 5) {
+		document.getElementById("que-container").style.backgroundColor = "#c4ffc4";
+
+	} else {
+		document.getElementById("que-container").style.backgroundColor = "#ff9999";
+	}
+	
+}
+
+
+function displayResultDiv() {
+	document.getElementById("results-div-id").style.display="block";
+}
+
+
+
+//not used
+function changeBgColor() {
+	console.log(totalMarks);
+	document.getElementById("que-container").style.backgroundColor = "green";
+}
+
+//not used
+function changeTextColor() {
+}

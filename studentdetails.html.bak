@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+
+	<title>MR. ROBOT</title>
+	<link rel="stylesheet" href="NavCSS.css"> 
+    <link rel="stylesheet" href="footer.css"> 
+	<link rel="icon" href="images/logo1.png">
+	
+	
+	<style>
+
+		
+		.all-div {
+			margin-left: auto;
+			margin-right: auto;
+			display: block;
+			padding: 50px;
+			position: relative;
+			left: 120px;
+		}
+		
+		img {
+			border-radius: 50%;
+		}
+	
+		.all-div {
+			clear: both;
+			position: relative;
+			width: 50%;
+		}
+		
+		.all-img {
+			opacity: 1;
+			display: block;
+			width: 100%;
+			height: auto;
+			transition: .5s ease;
+			backface-visibility: hidden;
+		}
+		
+		.middle1 {
+			transition: .5s ease;
+			opacity: 0;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			-ms-transform: translate(-50%, -50%)
+		}
+		
+		.middle1 {
+			transition: .5s ease;
+			opacity: 0;
+			position: absolute;
+			top: 50%;
+			left: 70%;
+			transform: translate(-50%, -50%);
+			-ms-transform: translate(-50%, -50%)
+		}
+		
+		.middle2 {
+			transition: .5s ease;
+			opacity: 0;
+			position: absolute;
+			top: 50%;
+			left: 70%;
+			transform: translate(-50%, -50%);
+			-ms-transform: translate(-50%, -50%)
+		}
+		
+		.middle3 {
+			transition: .5s ease;
+			opacity: 0;
+			position: absolute;
+			top: 50%;
+			left: 70%;
+			transform: translate(-50%, -50%);
+			-ms-transform: translate(-50%, -50%)
+		}
+		
+		.middle4 {
+			transition: .5s ease;
+			opacity: 0;
+			position: absolute;
+			top: 50%;
+			left: 70%;
+			transform: translate(-50%, -50%);
+			-ms-transform: translate(-50%, -50%)
+		}
+		
+		.all-div:hover .all-img {
+			opacity: 0.3;
+		}
+		
+		.all-div:hover .center {
+			opacity: 1;
+		}
+		
+		.text {
+			background-color: #9B1003;
+			color: white;
+			font-size: 20px;
+			padding: 16px 32px;
+			text-align:center;
+		}
+		
+		
+		.editor {
+			padding: 7px;
+			background-color: #9B1003;
+			text-decoration: none;
+			color: white;
+			border-radius: 5px;
+			width: 100%
+		}
+		
+		.backtotop {
+			clear: both;
+		}
+		
+	</style>
+
+</head>
+
+
+<body>
+
+		<div id="backtotop-heading" class="mrrobot-div">
+		<a class="robot-a" href="Home.html"><input type="image" name="robot computer" src="images/logo1.png" alt="robot computer" width="5%"></a>
+		<a class="robot-b" href="Home.html"><input type="image" name="robot computer" src="images/mrrobot.png" alt="robot computer" width="65%"></a>
+		</div>
+		
+		<div class="nav"> 
+			<ul>
+				<li><input type="button" class="btn1" value="Home" name="button1" onClick="window.location.href='Home.html'"></li>
+				<li><input type="button" class="btn1" value="Buy Products" name="button2" onClick="window.location.href='product.html'"></li>			
+				<li><input type="button" class="btn1" value="Query Form" name="button3"  onClick="window.location.href='queryform.html'" ></li>  <!--parent.open() opens page in new tab-->
+				<li><input type="button" class="btn1" value="Quiz" name="button4" onClick="window.location.href='quiz.html'"></li>			
+				<li><input type="button" class="btn1" value="About Us" name="button5" onClick="window.location.href='about us.html'"></li>			
+				<li><input type="button" class="btn1" value="Site Map" name="button6" onClick="window.location.href='sSitemap.html'"></li>
+				<li><input type="button" class="btn1" value="Student Details" name="button7" onClick="window.location.href='studentdetails.html'" style="background-color:#9B1003;color:white;"></li>
+				<li><input type="button" class="btn1" value="Images" name="button8" onClick="window.location.href='thumbnail.html'"></li>
+			</ul>
+		</div>
+	
+	
+	
+	
+		<div class="image1 all-div">
+			<a href="https://www.facebook.com/nisal.shanthadewa/" target="_blank">
+			<img src="images/image1.jpeg" class="img1 all-img" alt="Nisal" style="width:40%; height:45%">
+			</a>
+			<div class="middle1 center">
+				<div class="text">Nisal Shanthadewa<br>
+				Student 1</div>
+			</div>
+		</div>
+		
+	
+		
+		
+		<div class="image2 all-div">
+			<a href="https://www.instagram.com/?hl=en" target="_blank">
+			<img src="images/image2.jpeg" class="img2 all-img" alt="Gevin" style="width:38%">
+			</a>			
+			<div class="middle2 center">
+				<div class="text">Gevin Karunarathne<br>
+				Student 2</div>
+			</div>		
+		</div>
+		
+		
+		
+		<div class="image3 all-div">
+			<a href="https://www.facebook.com/mohomed.reeza.96/" target="_blank">
+			<img src="images/image3.jpeg" class="img3 all-img" alt="Reeza" style="width:41%">
+			</a>			
+			<div class="middle3 center">
+				<div class="text">Mohomed Reeza<br>
+				Student 3</div>
+			</div>		
+		</div>
+		
+		
+		
+		<div class="image4 all-div">
+			<a href="#" target="_blank">
+			<img src="images/image4.jpeg" class="img4 all-img" alt="Rithushan" style="width:40%">
+			</a>			
+			<div class="middle4 center">
+				<div class="text">Shanmugaraja Rithurson<br>
+				Student 4</div>
+			</div>		
+		</div>
+
+
+		<br>
+		
+		<div class="backtotop">
+			<a href="#backtotop-heading"><img class="backtotop-img" src="Images/backtotop1.png" width="3%"></a>
+		</div>
+		
+		<br>
+
+
+		<footer>
+			<a class="editor" href="sdpageeditor.html" target="_blank">Page Editor</a>
+		</footer>
+
+		<br>
+
+		<div class="bottom">
+				<div class="b-left">
+					<h4>&copy Since 2021</h4>
+					
+				</div>
+				<div class="b-middle">
+					<h4>Our Branches :</h4>
+					<ul>
+						<li> Gampaha</li><br>
+						<li> Colombo</li><br>
+						<li> Kandy </li><br>
+						
+					</ul>
+				</div>
+				<div class="b-right">
+					<h4> Find Us On :</h4>
+					<ul>
+						<li> Email: robot@gmail.com</li>
+					</ul>
+				</div>		
+		</div>
+
+</body>
+
+</html>

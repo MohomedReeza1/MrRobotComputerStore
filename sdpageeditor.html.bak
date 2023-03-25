@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<title>Page Editor</title>
+		<link rel="icon" href="images/robot.png">
+	</head>
+
+	<body>
+		<p><b>Name:</b> Mohomed Reeza</p>
+		<p><b>IIT ID:</b> 20210451</p>
+		<p><b>UoW ID:</b> w1867161</p>
+		<br>
+		<p><b>Role:</b></p>
+		<p>Html page for student details</p>
+		<br>
+		<p><b>Tasks completed:</b></p>
+		<p>1. Created a html page for student details.</p>
+		<p>2. Included images of each member in our group.</p>
+		<p>3. Details of group member is displayed when mouse over a picture.</p>
+	</body>
+	
+</html>
